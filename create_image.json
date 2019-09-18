@@ -19,7 +19,7 @@
       "ssh_username": "{{user `ssh_username`}}",
       "run_tags": {"Name":"packer-image"},
       "ami_groups": "all",
-      "ami_name": "{{user `ami_name`}}"
+      "ami_name": "{{user `ami_name`}}",
       "launch_block_device_mappings": [
         {
           "device_name": "/dev/sda1",
