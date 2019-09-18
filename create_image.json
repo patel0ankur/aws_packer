@@ -6,7 +6,7 @@
   "vpc_public_sn_id": "subnet-b1cdc7c7",
   "source_ami": "ami-d8dec4a7",
   "instance_type": "t2.micro",
-  "ssh_username": "patelax",
+  "ssh_username": "patelax"
 },
   "builders": [
     {
