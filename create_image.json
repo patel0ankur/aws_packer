@@ -4,7 +4,7 @@
   "region": "us-east-1",
   "vpc_id": "vpc-5bb30b3c",
   "vpc_public_sn_id": "subnet-b1cdc7c7",
-  "source_ami": "ami-d8dec4a7",
+  "source_ami": "ami-0b69ea66ff7391e80",
   "instance_type": "t2.micro",
   "ssh_username": "ec2-user",
   "ami_name": "packer_{{timestamp}}"
