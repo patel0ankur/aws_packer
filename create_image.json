@@ -1,0 +1,38 @@
+{
+  "variables": {
+  "profile": "default",
+  "region": "us-east-1",
+  "vpc_id": "vpc-5bb30b3c",
+  "vpc_public_sn_id": "subnet-b1cdc7c7",
+  "source_ami": "ami-d8dec4a7",
+  "instance_type": "t2.micro",
+  "ssh_username": "patelax",
+},
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "{{user `region`}}",
+      "source_ami": "{{user `source_ami`}}",
+      "instance_type": "{{user `instance_type`}}",
+      "communicator": "ssh",
+      "ssh_username": "{{user `ssh_username`}}",
+      "run_tags":{"Name":"packer-image"}
+      "ami_groups": "all",
+      "launch_block_device_mappings": [
+        {
+          "device_name": "/dev/sda1",
+          "volume_type": "gp2",
+          "volume_size": "30",
+          "delete_on_termination": true
+        }
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "manifest",
+      "output": "manifest.json",
+      "strip_path": true
+    }
+  ]
+}
