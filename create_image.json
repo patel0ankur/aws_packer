@@ -16,7 +16,7 @@
       "instance_type": "{{user `instance_type`}}",
       "communicator": "ssh",
       "ssh_username": "{{user `ssh_username`}}",
-      "run_tags":{"Name":"packer-image"}
+      "run_tags": {"Name":"packer-image"},
       "ami_groups": "all",
       "launch_block_device_mappings": [
         {
