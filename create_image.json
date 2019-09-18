@@ -7,7 +7,7 @@
   "source_ami": "ami-d8dec4a7",
   "instance_type": "t2.micro",
   "ssh_username": "patelax",
-  "ami_name": "packer {{date}}"
+  "ami_name": "packer_{{timestamp}}"
 },
   "builders": [
     {
