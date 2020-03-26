@@ -13,6 +13,7 @@
       "source_ami": "{{user `source_ami`}}",
       "instance_type": "{{user `instance_type`}}",
       "ami_name": "{{user `ami_name`}}",
+      "most_recent": true,
       "ssh_username": "ec2-user",
       "run_tags": {"Name":"packer-image"},
       "ami_groups": "all",
